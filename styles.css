@@ -28,6 +28,10 @@ body {
     background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('notifications.png') no-repeat center center fixed;
     background-size: cover;
 }
+.settings {
+    background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('settings.png') no-repeat center center fixed;
+    background-size: cover;
+}
 h1 {
   font-size: 60px;
 }
