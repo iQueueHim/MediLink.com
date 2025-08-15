@@ -1,10 +1,42 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: url('body.jpeg') no-repeat center center fixed;
+    font-family:'Times New Roman', Times, serif;
     background-size: cover;
     color: #333;
+}
+.body {
+    background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('body.jpeg') no-repeat center center fixed;
+    background-size: 35%;
+}
+.patients {
+    background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('patients.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+.appointments {
+    background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('appointment.gif') no-repeat center center fixed;
+}
+.pharmacy {
+    background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('pharmacy.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+.announcements {
+    background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('announcements.png') no-repeat center center fixed;
+    background-size: cover;
+}
+.notifications {
+    background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('notifications.png') no-repeat center center fixed;
+    background-size: cover;
+}
+h1 {
+  font-size: 60px;
+}
+.center {
+    text-align: center;
+    padding: 15px 0;
+}
+.log {
+    margin-top: 70px;
 }
 .sidebar {
     height: 100%;
@@ -35,7 +67,7 @@ body {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 90px;
 }
 .card {
     background: white;
@@ -49,7 +81,7 @@ body {
 }
 .card:hover {
     transform: translateY(-5px);
-    background-color: #ecf0f1;
+    background-color: #71c3e6;
 }
 .card:active, .card:focus, .card:visited {
     color: inherit;
