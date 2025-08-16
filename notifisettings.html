@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications Settings</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="notifications">
+
+<div class="sidebar" id="sidebar">
+    <button id="toggleSidebar">☰</button>
+    <h2><span>Menu</span></h2>
+    <a href="home.html"><i class="fas fa-home-alt"></i> Home</a>
+    <a href="settings.html"><i class="fas fa-cog"></i><span> Settings</span></a>
+
+    <div class="divider">
+        <a href="#" onclick="logout()"><i class="log fas fa-sign-out-alt"></i><span> Log Out</span></a>
+    </div>
+</div>
+
+
+<div class="content">
+  <h1 class="center">Notifications</h1>
+  <form class="form">
+    <label>
+      <input type="checkbox"> Email Alerts
+    </label>
+    <label>
+      <input type="checkbox"> SMS Alerts
+    </label>
+    <label>
+      <input type="checkbox"> Push Notifications
+    </label>
+    <label>
+      <input type="checkbox"> Appointment Reminders
+    </label>
+
+    <button type="submit">Save Preferences</button>
+  </form>
+</div>
+</body>
+</html>

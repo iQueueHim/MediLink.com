@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Settings</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="profile">
+
+<div class="sidebar" id="sidebar">
+    <button id="toggleSidebar">☰</button>
+    <h2><span>Menu</span></h2>
+    <a href="home.html"><i class="fas fa-home-alt"></i> Home</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+
+    <div class="divider">
+        <a href="#" onclick="logout()"><i class="log fas fa-sign-out-alt"></i><span> Log Out</span></a>
+    </div>
+</div>
+
+
+<div class="content">
+  <h1 class="center">Profile Settings</h1>
+  <h2 class="center">Welcome, Doc!</h2>
+
+  <img id="profileImage" src="doctor.png" alt="Doctor Image" class="sm center">
+  <p id="profileDetails" class="pro"></p>
+</div>
+
+<script src="script.js"></script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create New Password</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="security">
+  <div class="form-container">
+    <img src="Logo.png" class="sm center" alt="Logo">
+    <h2>Create New Password</h2>
+    <form id="setPasswordForm">
+
+      <label>Enter New Password:
+        <input type="password" id="newPassword" required />
+      </label>
+
+      <label>Confirm Password:
+        <input type="password" id="confirmPassword" required />
+      </label>
+
+      <button type="submit">Set Password</button>
+    </form>
+    <p id="message"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -3,33 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MediLink Account Login</title>
+  <title>Account</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="login">
   <div class="form-container">
     <img src="Logo.png" class="sm center" alt="Logo">
-    <h2>Account Login</h2>
-    <form id="adminLoginForm">
+    <h2>Create Account</h2>
+
+    <form id="setPasswordForm">
 
       <label>Username:
         <input type="text" id="username" required />
       </label>
 
       <label>Password:
-        <input type="password" id="adminPassword" required />
+        <input type="password" id="Password" required />
       </label>
 
-      <button type="submit">Login</button>
-      <button class="sep" onclick="window.location.href='change-pass.html'">Forgot Password?</button>
+      <div class="buttons">
+        <button type="submit">Next</button>
+        <button type="reset">Reset</button>
+      </div>
 
     </form>
-    
-    <div class="" style="margin-top: 20px; flex-direction: column;">
-      <p>New Doctor?</p>
-      <button onclick="window.location.href='create-account.html'">Create Account</button>
-    </div>
-
     <p id="message"></p>
   </div>
   <script src="script.js"></script>

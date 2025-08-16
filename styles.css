@@ -1,13 +1,24 @@
 
 body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
-    font-family:'Times New Roman', Times, serif;
     background-size: cover;
     color: #333;
 }
 .body {
     background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('body.jpeg') no-repeat center center fixed;
     background-size: 35%;
+}
+.profile {
+    background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('profile.jpeg') no-repeat center center fixed;
+    background-size: 40%;
+}
+.pro {
+    font-size: 20px;
+}
+.security {
+    background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('security.png') no-repeat center center fixed;
+    background-size: 40%;
 }
 .patients {
     background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('patients.jpeg') no-repeat center center fixed;
@@ -18,11 +29,11 @@ body {
 }
 .pharmacy {
     background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('pharmacy.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    background-size: 50%;
 }
 .announcements {
     background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('announcements.png') no-repeat center center fixed;
-    background-size: cover;
+    background-size: 50%;
 }
 .notifications {
     background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('notifications.png') no-repeat center center fixed;
@@ -30,7 +41,7 @@ body {
 }
 .settings {
     background: radial-gradient(rgba(192, 187, 187, 0.7), rgba(11, 123, 111, 0.812)), url('settings.png') no-repeat center center fixed;
-    background-size: cover;
+    background-size: 30%;
 }
 h1 {
   font-size: 60px;
@@ -39,30 +50,114 @@ h1 {
     text-align: center;
     padding: 15px 0;
 }
+.fas {padding-right: 10px;
+
+}
+.menspace {
+  margin-bottom: 300px;
+}
 .log {
-    margin-top: 70px;
+  margin-bottom: auto;
+  position: relative;
+  padding: 12px;
+  cursor: pointer;
 }
+.login::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('Logo.png') center center/cover no-repeat;
+  z-index: -2;
+}
+.login::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(69, 65, 65, 0.7);
+  z-index: -1;
+}
+.form-container {
+  max-width: 500px;
+  background: white;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+}
+.sm{
+  max-width: 100%;
+  height: 15vh;
+}
+.sm.center {
+  display: block;
+  margin: 0 auto 20px;
+}
+
 .sidebar {
-    height: 100%;
-    width: 220px;
-    position: fixed;
-    background-color: #2c3e50;
-    padding-top: 20px;
+  box-shadow: 0 6px 9px rgba(0, 0, 0, 0.555);
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #1d5286;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
 }
+
+.sidebar.collapsed {
+  width: 70px; /* collapsed width */
+}
+
 .sidebar h2 {
-    color: white;
-    text-align: center;
-    margin-bottom: 30px;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
 }
+
 .sidebar a {
-    padding: 15px;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    display: block;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
 }
+
 .sidebar a:hover {
-    background-color: #34495e;
+  background-color: #68a7e7;
+}
+
+.sidebar .divider {
+  margin-top: auto;
+  padding: 15px 12px;
+}
+
+.sidebar .divider a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar.collapsed a span {
+  display: none; /* hide text in collapsed state */
+}
+
+.sidebar button#toggleSidebar {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+  align-self: flex-start;
 }
 .content {
     margin-left: 220px;
@@ -71,11 +166,11 @@ h1 {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 90px;
+    gap: 120px;
 }
 .card {
     background: white;
-    padding: 30px;
+    padding: 70px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     cursor: pointer;
@@ -91,6 +186,45 @@ h1 {
     color: inherit;
     text-decoration: none;
 }
+/* Settings rows */
+.set {
+    padding: 15px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #1d638e;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.set:hover {
+    background-color: #76a5d4;
+    transform: translateX(5px);
+}
+
+.set span {
+    text-decoration: none;
+    color: white;
+}
+
+/* Dropdown for theme */
+.theme-options {
+    margin-top: 10px;
+    background: white;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.theme-option {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.theme-option:hover {
+    background: #f1f1f1;
+}
+.hidden {
+    display: none;
+}
 @media (max-width: 768px) {
     .card {
         flex: 1 1 calc(50% - 40px);
@@ -100,4 +234,223 @@ h1 {
     .card {
         flex: 1 1 100%;
     }
+}
+
+
+
+
+
+
+
+
+
+.text-white {
+  color: aliceblue;
+}
+
+.cards{
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  max-width: 40%;
+  min-width: 25%;
+  height: 30vh;
+  display:inline-block;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+  padding: 1rem;
+  margin: 60px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Content above the overlay layout using flex */
+.card-content {
+  position: relative;
+  z-index: 1;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+  width: 90%;
+}
+
+/* Overlay for all cards */
+.cards .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.cat{
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  max-width: 40%;
+  min-width: 25%;
+  height: 10vh;
+  display:inline-block;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+  padding: 1rem;
+  margin: 60px;
+  background-color: aliceblue;
+
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+ .pass {
+  border-radius: 15px;
+  max-width: 30%;
+  min-width: 20%;
+  height: 5vh;
+  display:inline-block;
+  justify-content: left;
+  align-items: stretch;
+  text-align: center;
+  margin: 30px;
+  background-color: #222;
+}
+
+/* Backgrounds */
+.register   { background-image: url("register-btn.gif"); }
+.visit   { background-image: url("visit.gif"); }
+
+/* Responsive fixes for small screens */
+@media (max-width: 767.98px) {
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .cards {
+    height: 230px; /* shorter height for mobile */
+    padding: 0.5rem;
+  }
+
+  .cat {
+  height: 80px; /* shorter height for mobile */
+  padding: 0.75rem;
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+  }
+
+  .card-content a {
+    font-size: 1rem;
+    color: #000000;
+  }
+
+  .btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+  }
+}
+
+  .cards:hover {
+    box-shadow: 0 0 5px rgba(142, 245, 245, 0.7), 0 0 15px rgba(8, 13, 14, 0.662);
+  }
+
+header {
+  background-color: #08206e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 15px #000000;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+.form-container {
+  max-width: 500px;
+  background: white;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+}
+h2 {
+  text-align: center;
+}
+label {
+  display: block;
+  margin: 15px 0;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.adlog{
+  margin-top: 120px;
+}
+
+textarea {
+  resize: vertical;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.sep{
+  margin-left: 290px;
+}
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #004080;
+  color: white;
+  cursor: pointer;
+  border-radius: 15px;
+}
+button:hover {
+  background-color: #0066cc;
+}
+windo
+#message {
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(0, 58, 128);
+  font-weight: bold;
+}
+/* Sidebar toggle button */
+#toggleSidebar {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* Collapsed sidebar */
+.sidebar.collapsed {
+  width: 60px;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed h2,
+.sidebar.collapsed a {
+  display: none; /* hide labels */
+}
+
+.content.collapsed {
+  margin-left: 60px;
+  transition: margin-left 0.3s ease;
 }

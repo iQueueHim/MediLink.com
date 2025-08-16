@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="login">
+  <div class="form-container">
+    <img src="Logo.png" class="sm center" alt="Logo">
+    <h2>Bio</h2>
+        <form id="registrationForm">
+
+              <label>Upload Profile Picture:
+         <input type="file" id="profilePic" accept="image/*">
+     </label>
+
+  <label>Full Name</label>
+  <input type="text" id="fullname" placeholder="Enter your name" required>
+
+  <label>Email</label>
+  <input type="email" id="email" placeholder="Enter your email" required>
+
+  <label>Phone</label>
+  <input type="tel" id="phone" placeholder="Enter phone number" required>
+
+  <label>Specialization</label>
+  <select id="specialization" required>
+    <option value=""> </option>
+    <option>Optometry</option>
+    <option>Dermatology</option>
+    <option>Cardiology</option>
+    <option>Psychiatry</option>
+    <option>Neurology</option>
+    <option>General Medicine</option>
+    <option>General Surgery</option>
+    <option>Orthopedics</option>
+    <option>Pediatrics</option>
+    <option>Ophthalmology</option>
+    <option>ENT</option>
+    <option>Radiology</option>
+    <option>Gynecology</option>
+    <option>Urology</option>
+    <option>Gastroenterology</option>
+    <option>Oncology</option>
+  </select>
+
+  <label>License Number:
+    <input type="tel" id="license" inputmode="numeric" pattern="\d{10}" maxlength="10" required />
+  </label>
+
+  <div class="buttons">
+    <button type="submit">Next</button>
+    <button type="reset">Reset</button>
+  </div>
+</form>
+
+    <p id="message"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
