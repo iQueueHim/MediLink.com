@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           let botMsg = document.createElement("p");
           botMsg.classList.add("bot");
-          botMsg.textContent = "Thank you for your message, we’ll get back to you!";
+          botMsg.textContent = "Thank you for your message, I'll get back to you as I'm currently busy. Do contact me on 0554928613 for urgent matters.";
           chatMessages.appendChild(botMsg);
           chatMessages.scrollTop = chatMessages.scrollHeight;
         }, 1000);
