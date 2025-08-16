@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile Settings</title>
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -22,15 +24,39 @@
 
 
 <div class="content">
-  <h1 class="center">Profile Settings</h1>
-  <h2 class="center">Welcome, Doc!</h2>
+  <h1 class="center">Profile </h1>
+  <h2 class="center welkies">Welcome, Doc!</h2>
 
-  <img id="profileImage" src="doctor.png" alt="Doctor Image" class="sm center">
+  <img id="profileImage" src="doctor.png" alt=" " class="sm center">
   <p id="profileDetails" class="pro"></p>
 </div>
 
 <script src="script.js"></script>
 
 </div>
+
+<!-- Floating Chat Button -->
+<div id="chatWidget">
+  <div id="chatButton">
+    <i class="fas fa-stethoscope"></i>
+  </div>
+  <div id="chatBox">
+    <div class="chat-header">
+      <span>Health Assistant</span>
+      <button id="closeChat" type="button">&times;</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <p class="bot">Hello 👋, how can I assist you today?</p>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Type a message..." />
+      <button id="sendChat" type="button">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+
 </body>
 </html>

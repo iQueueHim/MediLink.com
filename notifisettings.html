@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Notifications Settings</title>
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -40,5 +42,29 @@
     <button type="submit">Save Preferences</button>
   </form>
 </div>
+
+<!-- Floating Chat Button -->
+<div id="chatWidget">
+  <div id="chatButton">
+    <i class="fas fa-stethoscope"></i>
+  </div>
+  <div id="chatBox">
+    <div class="chat-header">
+      <span>Health Assistant</span>
+      <button id="closeChat" type="button">&times;</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <p class="bot">Hello 👋, how can I assist you today?</p>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Type a message..." />
+      <button id="sendChat" type="button">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+
 </body>
 </html>
